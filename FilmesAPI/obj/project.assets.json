@@ -3940,11 +3940,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alef\\Desktop\\Projetos\\APIs .NET\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Alef\\Desktop\\Projetos\\APIs .NET\\API-Git\\FilmesAPI\\FilmesAPI.csproj",
       "projectName": "FilmesAPI",
-      "projectPath": "C:\\Users\\Alef\\Desktop\\Projetos\\APIs .NET\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
+      "projectPath": "C:\\Users\\Alef\\Desktop\\Projetos\\APIs .NET\\API-Git\\FilmesAPI\\FilmesAPI.csproj",
       "packagesPath": "C:\\Users\\Alef\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alef\\Desktop\\Projetos\\APIs .NET\\FilmesAPI\\FilmesAPI\\obj\\",
+      "outputPath": "C:\\Users\\Alef\\Desktop\\Projetos\\APIs .NET\\API-Git\\FilmesAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages"

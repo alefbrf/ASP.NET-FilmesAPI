@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VHpmiHRAixF6UOLVy2+qZA2r5hiuSZExXt7QYeaa2IB/DsU+QPbsU5boy3tyaVYXdZ83ynI9ltPmHRhPRAO2+A==",
+  "dgSpecHash": "c+OPAeZZE5abTCdqVWfJTIhsQi2B36hODkxZqrT0Hnw1X7bhpW+l6BNcva5kz2wTlqWrJP2e8cRhzt2Js7Li7g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alef\\Desktop\\Projetos\\APIs .NET\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
+  "projectFilePath": "C:\\Users\\Alef\\Desktop\\Projetos\\APIs .NET\\API-Git\\FilmesAPI\\FilmesAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alef\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Alef\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
