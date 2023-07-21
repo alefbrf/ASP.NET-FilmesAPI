@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Azure;
 using FilmesAPI.Data;
 using FilmesAPI.Data.DTOs;
 using FilmesAPI.Models;
@@ -47,7 +46,36 @@ public class FilmeController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     public IEnumerable<ReadFilmeDTO> RecuperaFilmes([FromQuery]int skip = 0, [FromQuery]int take = 20)
     {
-        return _mapper.Map<List<ReadFilmeDTO>>(_context.Filmes.Skip(skip).Take(take));
+        var filmes = (
+            from objFilme in _context.Filmes
+            select new Filme
+            {
+                Id = objFilme.Id,
+                Titulo = objFilme.Titulo,
+                Genero = objFilme.Genero,
+                Duracao = objFilme.Duracao
+            }
+        ).Skip(skip).Take(take).ToList();
+
+        var lstFilmeId = filmes.Select(c => c.Id).ToList();
+
+        var sessoes = (
+            from objSessoes in _context.Sessoes.Where(p => lstFilmeId.Contains(p.FilmeId))
+            select new Sessao
+            {
+                Id = objSessoes.Id,
+                FilmeId = objSessoes.FilmeId
+            }
+        ).ToList();
+
+        foreach (Filme filme in filmes)
+        {
+            filme.Sessoes = sessoes.Where(p => filme.Id == p.FilmeId).Select(x => new Sessao
+            {
+                Id = x.Id
+            }).ToList();
+        }
+        return _mapper.Map<List<ReadFilmeDTO>>(filmes);
     }
 
     /// <summary>

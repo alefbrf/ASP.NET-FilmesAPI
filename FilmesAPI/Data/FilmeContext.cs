@@ -7,9 +7,19 @@ namespace FilmesAPI.Data
     {
         public FilmeContext(DbContextOptions<FilmeContext> opts): base(opts)
         {
-            
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Endereco>()
+                .HasOne(endereco => endereco.Cinema)
+                .WithOne(cinema => cinema.Endereco)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
         public DbSet <Filme> Filmes { get; set; }
+        public DbSet <Cinema> Cinemas { get; set; }
+        public DbSet <Endereco> Enderecos { get; set; }
+        public DbSet <Sessao> Sessoes { get; set; }
     }
 }

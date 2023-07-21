@@ -6,4 +6,5 @@ public class ReadFilmeDTO
     public string Genero { get; set; }
     public int Duracao { get; set; }
     public DateTime HoraConsulta { get; set; } = DateTime.Now;
+    public List<ReadSessaoDTO> Sessoes { get; set; }
 }
